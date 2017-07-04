@@ -10,5 +10,6 @@ $actualRoute = $_SERVER["REQUEST_URI"];
 
 $allRouts = [
     '/' => 'view/index.php',
-    'error' => '/view/error.php'
+    'error' => 'view/error.php',
+    'admin' => 'view/admin/index.php'
 ];

@@ -11,4 +11,4 @@ require '/config/route.php';
 
 $readyContent = isset($allRouts[$actualRoute]) ? $allRouts[$actualRoute] : $allRouts['error'];
 
-echo $readyContent;
+include '/' . $readyContent;

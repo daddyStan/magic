@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Астро Ландра</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
 </head>
 <body>
     <header class="header">
@@ -13,13 +13,13 @@
             <div class="wrap">
                 <div class="header-wrap">
                     <div class="logo">
-                        <img src="img/logo.png" alt="Астро Ландра" class="logo-img" />
+                        <img src="../assets/img/logo.png" alt="Астро Ландра" class="logo-img" />
                         <span class="logo-text">Астро Ландра</span>
                     </div>
                     <div class="social">
-                        <a class="social-btn" href="javascript:void(0);"><img src="img/vk_icon.svg" alt="Мы в Вконтакте"></a>
-                        <a class="social-btn" href="javascript:void(0);"><img src="img/inst_icon.svg" alt="Мы в Инстаграмм"></a>
-                        <a class="social-btn popup-open" href="javascript:void(0);"><img src="img/ask.svg" alt="Обратная связь"></a>
+                        <a class="social-btn" href="javascript:void(0);"><img src="../assets/img/vk_icon.svg" alt="Мы в Вконтакте"></a>
+                        <a class="social-btn" href="javascript:void(0);"><img src="../assets/img/inst_icon.svg" alt="Мы в Инстаграмм"></a>
+                        <a class="social-btn popup-open" href="javascript:void(0);"><img src="../assets/img/ask.svg" alt="Обратная связь"></a>
                         <span class="social-btn"></span>
                     </div>
                     <div class="address-block">
@@ -45,15 +45,15 @@
             <div class="owl-carousel">
                     <div class="owl-carousel_item">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A culpa et inventore ipsa itaque nostrum perspiciatis recusandae rem saepe sit.</p>
-                        <img src="img/1.jpg" alt="" />
+                        <img src="../assets/img/1.jpg" alt="" />
                     </div>
                     <div class="owl-carousel_item">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur commodi, dolorum esse et eum necessitatibus odio perspiciatis quibusdam sed.</p>
-                        <img src="img/2.jpg" alt="" />
+                        <img src="../assets/img/2.jpg" alt="" />
                     </div>
                     <div class="owl-carousel_item">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dicta dignissimos dolorem, laboriosam nesciunt nihil nisi quidem ullam ut vero.</p>
-                        <img src="img/3.jpg" alt="" />
+                        <img src="../assets/img/3.jpg" alt="" />
                     </div>
             </div>
         </div>
@@ -64,28 +64,28 @@
             <h2>Консультанты</h2>
             <div class="consultants-wrap">
                 <div class="consultant-item main-consultants">
-                    <img src="img/woman.jpg" alt="" />
+                    <img src="../assets/img/woman.jpg" alt="" />
                     <div class="consultant-desc">
                         <h3>Таисия Духовная</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis corporis, culpa debitis deleniti ducimus eos error excepturi ipsa molestiae, nesciunt officiis optio possimus quia quod, tenetur unde ut. Est, minus.</p>
                     </div>
                 </div>
                 <div class="consultant-item">
-                    <img src="img/man.jpg" alt="" />
+                    <img src="../assets/img/man.jpg" alt="" />
                     <div class="consultant-desc">
                         <h3>Туран Гамбитов</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae ducimus et quia sapiente sequi tenetur voluptas voluptatem. Rerum, vitae!</p>
                     </div>
                 </div>
                 <div class="consultant-item">
-                    <img src="img/woman.jpg" alt="" />
+                    <img src="../assets/img/woman.jpg" alt="" />
                     <div class="consultant-desc">
                         <h3>Василиса Премудрая</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, omnis quo! Alias beatae, dolor in perferendis provident ratione sit ullam.</p>
                     </div>
                 </div>
                 <div class="consultant-item">
-                    <img src="img/man.jpg" alt="" />
+                    <img src="../assets/img/man.jpg" alt="" />
                     <div class="consultant-desc">
                         <h3>Аргентин Властиславович</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores consequuntur culpa debitis delectus harum labore minus neque, recusandae tenetur?</p>
@@ -126,13 +126,13 @@
         <div class="wrap">
             <div class="footer-wrap">
                 <div class="logo">
-                    <img src="img/logo.png" alt="Астро Ландра" class="logo-img" />
+                    <img src="../assets/img/logo.png" alt="Астро Ландра" class="logo-img" />
                     <span class="logo-text">Астро Ландра</span>
                 </div>
                 <div class="social">
-                    <a class="social-btn" href="javascript:void(0);"><img src="img/vk_icon.svg" alt="Мы в Вконтакте"></a>
-                    <a class="social-btn" href="javascript:void(0);"><img src="img/inst_icon.svg" alt="Мы в Инстаграмм"></a>
-                    <a class="social-btn popup-open" href="javascript:void(0);"><img src="img/ask.svg" alt="Обратная связь"></a>
+                    <a class="social-btn" href="javascript:void(0);"><img src="../assets/img/vk_icon.svg" alt="Мы в Вконтакте"></a>
+                    <a class="social-btn" href="javascript:void(0);"><img src="../assets/img/inst_icon.svg" alt="Мы в Инстаграмм"></a>
+                    <a class="social-btn popup-open" href="javascript:void(0);"><img src="../assets/img/ask.svg" alt="Обратная связь"></a>
                     <span class="social-btn"></span>
                 </div>
                 <div class="address-block">
@@ -153,7 +153,7 @@
         </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/owl.carousel.min.js" type="text/javascript"></script>
-    <script src="js/main.js" type="text/javascript"></script>
+    <script src="../assets/js/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="../assets/js/main.js" type="text/javascript"></script>
 </body>
 </html>

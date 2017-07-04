@@ -45,7 +45,7 @@ body{
     background-color: #efefef;
 }
 h2 {
-    font-size: 30px;
+    font-size: 40px;
     line-height: 40px;
     text-align: center;
     margin-bottom: 40px;
@@ -54,10 +54,12 @@ h3 {
     font-size: 20px;
     margin-bottom: 10px;
 }
+p {
+    margin: 10px 0;
+}
 .header {
-    padding-bottom: 50px;
-    background: #251e1e;
-    background: linear-gradient(to top, #000, #3a2436);
+    height: 100vh;
+    background: #000;
 }
 .wrap {
     max-width: 1080px;
@@ -66,6 +68,7 @@ h3 {
 }
 .header-top {
     padding: 10px 0;
+    padding-top: 30px;
     background-color: rgba(0,0,0, .2);
 }
 .header-wrap, .footer-wrap {
@@ -93,7 +96,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     text-align: right;
-    width: 20%;
+    width: 30%;
 }
 .tel {
     display: block;
@@ -142,7 +145,7 @@ h3 {
     width: 100%;
 }
 .nav {
-    margin: 20px 0 40px 0;
+    margin: 20px 0 10px 0;
 }
 .nav-list {
     display: flex;
@@ -173,7 +176,8 @@ h3 {
     border-bottom: 1px solid #fff;
 }
 .owl-carousel .owl-item img {
-     height: 500px;
+    height: 65vh;
+    object-fit: cover;
  }
 .owl-carousel_item p {
     position: absolute;
@@ -212,7 +216,7 @@ h3 {
 .consultants-wrap {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
 }
 .consultant-item {
     display: flex;
@@ -221,6 +225,8 @@ h3 {
     justify-content: center;
     width: 32%;
     margin-right: 2%;
+    padding: 15px;
+    box-shadow: 0 1px 10px #d8d8d8;
 }
 .consultant-item:last-child {
     margin-right: 0;
@@ -228,22 +234,21 @@ h3 {
 .consultant-item.main-consultants {
     flex-wrap: nowrap;
     width: 100%;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }
 .consultant-item img {
     width: 100%;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
     margin-bottom: 20px;
 }
 .consultant-item.main-consultants img {
-    max-width: 50%;
+    max-width: 58%;
     margin-bottom: 0px;
     margin-right: 2%;
 }
 .reviews {
     padding: 40px 0;
-    background-color: #fff;
 }
 .review-item {
     display: flex;
@@ -277,8 +282,7 @@ h3 {
 }
 .footer {
     padding: 10px 0;
-    background: #251e1e;
-    background: linear-gradient(to top, #000, #3a2436);
+    background: #000;
 }
 .footer .logo {
     cursor: pointer;
@@ -411,4 +415,29 @@ textarea:-ms-input-placeholder {
 }
 textarea:focus:-ms-input-placeholder {
     color: #000;
+}
+.price, .about {
+    padding: 40px 0;
+}
+li {
+    list-style: none;
+    padding-left: 20px;
+}
+.about p {
+    font-size: 18px;
+    line-height: 26px;
+}
+#price .wrap > div {
+
+    background: #e0e0e0;
+    background: linear-gradient(to right, #e0e0e0, #efefef);
+    text-align: left;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+#price .wrap > div:nth-child(2n) {
+    text-align: right;
+}
+#price .wrap > div p {
+    margin-top: 0;
 }

@@ -22,7 +22,6 @@ $(document).ready(function(){
             top = $(id).offset().top;
 
         $('html,body').animate({scrollTop: top}, 400);
-        console.log(top);
     });
 
     $(openPopup).click(function() {

@@ -4,7 +4,10 @@
 $(document).ready(function(){
 
     var popup     = $('.feedback'),
-        openPopup = $('.popup-open');
+        openPopup = $('.popup-open'),
+        formBtn   = $('#send-form'),
+        formName  = $(formBtn).find('#name'),
+        formEmail = $(formBtn).find('#email');
 
     $('.owl-carousel').owlCarousel({
         items:1,
@@ -22,7 +25,6 @@ $(document).ready(function(){
             top = $(id).offset().top;
 
         $('html,body').animate({scrollTop: top}, 400);
-        console.log(top);
     });
 
     $(openPopup).click(function() {

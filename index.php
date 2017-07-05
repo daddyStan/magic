@@ -7,8 +7,8 @@
  */
 
 ini_set('display_errors', 1);
-require '/config/route.php';
+require 'config/route.php';
 
 $readyContent = isset($allRouts[$actualRoute]) ? $allRouts[$actualRoute] : $allRouts['error'];
 
-include '/' . $readyContent;
+include $readyContent;

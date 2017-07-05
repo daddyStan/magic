@@ -39,7 +39,6 @@
             <div class="wrap">
                 <ul class="nav-list">
                     <li class="nav-list_item"><a class="nav-list_item_link" href="#consultants">Консультанты</a></li>
-                    <li class="nav-list_item"><a class="nav-list_item_link" href="javascript:void(0);">Услуги</a></li>
                     <li class="nav-list_item"><a class="nav-list_item_link" href="#price">Цена вопроса</a></li>
                     <li class="nav-list_item"><a class="nav-list_item_link" href="#reviews">Отзывы</a></li>
                     <li class="nav-list_item"><a class="nav-list_item_link" href="#contacts">Контакты</a></li>
@@ -49,15 +48,15 @@
         <div class="owl-carousel">
             <div class="owl-carousel_item">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A culpa et inventore ipsa itaque nostrum perspiciatis recusandae rem saepe sit.</p>
-                <img src="../assets/img/1.jpg" alt="" />
+                <img src="../assets/img/slider/1.jpg" alt="" />
             </div>
             <div class="owl-carousel_item">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur commodi, dolorum esse et eum necessitatibus odio perspiciatis quibusdam sed.</p>
-                <img src="../assets/img/2.jpg" alt="" />
+                <img src="../assets/img/slider/2.jpg" alt="" />
             </div>
             <div class="owl-carousel_item">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dicta dignissimos dolorem, laboriosam nesciunt nihil nisi quidem ullam ut vero.</p>
-                <img src="../assets/img/3.jpg" alt="" />
+                <img src="../assets/img/slider/3.jpg" alt="" />
             </div>
         </div>
     </header>
@@ -116,47 +115,147 @@
     <div class="price" id="price">
         <div class="wrap">
             <h2>Цена вопроса</h2>
-            <div>
-                <p>Консультация астропсихолога:</p>
-                <ul>
-                    <li>- Обсуждение одной проблемы: 4000-6000 руб. (в пределах получаса)</li>
-                </ul>
-            </div>
-            <div>
-                <p>Полный гороскоп - 8000-10000 руб.</p>
-                <ul>
-                    <li>- Все повторные визиты -50%</li>
-                </ul>
-            </div>
-            <div>
-                <p>Общая консультация астропсихолога <br /> Вам рассказывают о Вас, отвечают на любые вопросы (в пределах часа):</p>
-                <ul>
-                    <li>- работа, учеба, карьера, здоровье, зачатие, дети и их Судьбы по звездам;</li>
-                    <li>- свадьба, развод, прогноз партнерства, брака;</li>
-                    <li>- поездки, соперники, взаимоотношения с родственниками, коллегами;</li>
-                    <li>- квартирные, имущественные, судебные ситуации и т.д..</li>
-                </ul>
-                <p>Все повторные визиты в течение года– 50% (от 3000 до 5000 руб).</p>
-            </div>
-            <div>
-                <p>Консультация таролога. <br /> Стоимость рассчитывается исходя из времени консультации - от  10 до 45 минут, от 1000 до 3000 рублей.</p>
-            </div>
-            <div>
-                <p>Обрядовая практика, изменение ситуации. <br />
-                    Стоимость устанавливается индивидуально, в зависимости от сложности. <br />
-                    Средний ценовой диапазон - от 5000 до 15000 рублей.</p>
-            </div>
-            <div>
-                <p>Активация амулетов и талисманов энергией стихий, что увеличивает их положительное воздействие на обладателя. Стоимость зависит от состояния предмета - от 500 до 2000 рублей.</p>
-            </div>
-            <div>
-                <p>Диагностика проблемных ситуаций с помощью ясновидения и карт Мадам Ленорман. Стоимость рассчитывается исходя из времени консультации - от 10 до 45 минут, от 1000 до 3000 рублей.</p>
-            </div>
-            <div>
-                <p>Работа с минералами для активации полного ресурса их силы. Стоимость от 500 до 1000 рублей.</p>
-            </div>
-            <div>
-                <p>Ритуалы на финансовое благополучие. Стоимость устанавливается индивидуально.</p>
+            <div class="price-list">
+                    <div class="price-item">
+                        <div class="price-img">
+                            <img src="../assets/img/1-200.jpg" alt="">
+                        </div>
+                        <div class="price-desc">
+                            <p>И для любознательных на «сладкое» – цена вопроса.</p>
+                            <div class="price-hover">
+                                <p>Больше информации при наведении на интересующую услугу.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-img">
+                            <img src="../assets/img/1-200.jpg" alt="">
+                        </div>
+                        <div class="price-desc">
+                            <p>Консультация астропсихолога по одной ситуации.</p>
+                            <div class="price-hover">
+                                - подробный анализ интересующего Вас вопроса <br /> Обсуждение одной проблемы: 4000 - 6000 руб. (в пределах получаса)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-img">
+                            <img src="../assets/img/1-200.jpg" alt="">
+                        </div>
+                        <div class="price-desc">
+                            <p>Полный астрологический гороскоп.</p>
+                            <div class="price-hover">
+                                <p>Стоимость 8000 - 10000 руб. <br /> Все повторные визиты - 50%</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="price-item">
+                    <div class="price-img">
+                        <img src="../assets/img/1-200.jpg" alt="">
+                    </div>
+                        <div class="price-desc">
+                            <p>Астрологический прогноз, консультация астропсихолога.</p>
+                            <div class="price-hover">
+                                <p>Вам рассказывают о Вас, отвечают на любые вопросы (в пределах часа): от 10000 руб. <br />
+                                    - работа, учеба, карьера, здоровье, зачатие, дети и их Судьбы по звездам;<br /
+                                    - свадьба, развод, прогноз партнерства, брака;<br /
+                                    - поездки, соперники, взаимоотношения с родственниками, коллегами;<br /
+                                    - квартирные, имущественные, судебные ситуации и т.д.<br /
+                                    Все повторные визиты в течение года– 50%</p>
+                            </div>
+                            </div>
+                </div>
+                <div class="price-item">
+                    <div class="price-img">
+                        <img src="../assets/img/1-200.jpg" alt="">
+                    </div>
+                        <div class="price-desc">
+                            <p>Консультация таролога.</p>
+                            <div class="price-hover">
+                                <p>- диагностика ситуации <br />
+                                    - прогноз на будущее<br />
+                                    - помощь в принятии решения<br />
+                                    Стоимость рассчитывается исходя из времени консультации - от  10 до 45 минут, от 1000 до 3000 рублей.</p>
+                            </div>
+                            </div>
+                </div>
+                <div class="price-item">
+                    <div class="price-img">
+                        <img src="../assets/img/1-200.jpg" alt="">
+                    </div>
+                        <div class="price-desc">
+                            <p>Обрядовая практика, изменение ситуации.</p>
+                            <div class="price-hover">
+                                <p>- привлечение партнера <br />
+                                    - гармонизация отношений <br />
+                                    - ритуалы на финансовое благополучие <br />
+                                    Стоимость устанавливается индивидуально, в зависимости от сложности. <br />
+                                    Средний ценовой диапазон - от 5000 до 15000 рублей.</p>
+                            </div>
+                            </div>
+                </div>
+                    <div class="price-item">
+                        <div class="price-img">
+                            <img src="../assets/img/1-200.jpg" alt="">
+                        </div>
+                        <div class="price-desc">
+                            <p>Активация амулетов и талисманов энергией стихий.</p>
+                            <div class="price-hover">
+                                <p>Увеличивает их положительное воздействие на обладателя. <br /> Стоимость зависит от состояния предмета - от 500 до 2000 рублей.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-img">
+                            <img src="../assets/img/1-200.jpg" alt="">
+                        </div>
+                        <div class="price-desc">
+                            <p>Диагностика проблемных ситуаций с помощью ясновидения и карт Мадам Ленорман.</p>
+                            <div class="price-hover">
+                                <p>Стоимость рассчитывается исходя из времени консультации - от 10 до 45 минут, от 1000 до 3000 рублей.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price-item">
+                        <div class="price-img">
+                            <img src="../assets/img/1-200.jpg" alt="">
+                        </div>
+                        <div class="price-desc">
+                            <p>Работа с минералами для активации полного ресурса их силы. </p>
+                            <div class="price-hover">
+                                <p>Стоимость от 500 до 1000 рублей.</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="price-item">
+                    <div class="price-img">
+                        <img src="../assets/img/1-200.jpg" alt="">
+                    </div>
+                        <div class="price-desc">
+                            <p>Профориентация: Звезды знают.</p>
+                            <div class="price-hover">
+                                <p>- не можете выбрать, куда пойти учиться?<br />
+                                    - недовольны своей работой?<br />
+                                    - хотите по максимуму раскрыть свой потенциал?<br />
+                                    Правильный выбор профессии в настоящем – это 85,5% Вашего успеха в будущем.<br />
+                                    Стоимость от 3000 до 5000 руб.</p>
+                            </div>
+                            </div>
+                </div>
+                <div class="price-item">
+                    <div class="price-img">
+                        <img src="../assets/img/1-200.jpg" alt="">
+                    </div>
+                    <div class="price-desc">
+                        <p>Снятие негативных воздействий.</p>
+                        <div class="price-hover">
+                            <p>Невозможно на 100% уберечься от зависти, потому что объектом недоброго взгляда может стать каждый.<br />
+                                Но в Ваших силах пройти диагностику и снять негативное воздействие в случае, если оно действительно есть.<br />
+                                - диагностика, чистка<br />
+                                - избавление от порчи/сглаза/проклятия<br />
+                                Стоимость зависит от сложности воздействия.</p>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>

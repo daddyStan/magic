@@ -12,10 +12,8 @@ require 'config/route.php';
 $readyContent = isset($allRouts[$actualRoute]) ? $allRouts[$actualRoute] : $allRouts['error'];
 
 /**
- *
  * @todo РАЗОБРАТЬСЯ С КЕЙСОМ:
  * В пути роута больше трёх параметров типа /ваф/выа/ваы/выа
- *
  */
 
 if ($readyContent == $allRouts['error']) {

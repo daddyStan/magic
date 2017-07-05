@@ -14,4 +14,7 @@ $allRouts = [
     'error' => 'view/error.php',
     '/admin' => 'view/admin/index.php',
     '/zag' => 'view/index.php',
+    '/logout' => [
+        'controller' => 'logout'
+    ]
 ];

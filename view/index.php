@@ -114,22 +114,11 @@
 <section>
     <div class="price" id="price">
         <div class="wrap">
-            <h2>Цена вопроса</h2>
+            <h2>Услуги нашего центра <span>И для любознательных на «сладкое» – цена вопроса. Больше информации при наведении на интересующую услугу.</span></h2>
             <div class="price-list">
                     <div class="price-item">
                         <div class="price-img">
-                            <img src="../assets/img/1-200.jpg" alt="">
-                        </div>
-                        <div class="price-desc">
-                            <p>И для любознательных на «сладкое» – цена вопроса.</p>
-                            <div class="price-hover">
-                                <p>Больше информации при наведении на интересующую услугу.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="price-item">
-                        <div class="price-img">
-                            <img src="../assets/img/1-200.jpg" alt="">
+                            <img src="../assets/img/2-200.jpg" alt="">
                         </div>
                         <div class="price-desc">
                             <p>Консультация астропсихолога по одной ситуации.</p>
@@ -140,7 +129,7 @@
                     </div>
                     <div class="price-item">
                         <div class="price-img">
-                            <img src="../assets/img/1-200.jpg" alt="">
+                            <img src="../assets/img/3-200.jpg" alt="">
                         </div>
                         <div class="price-desc">
                             <p>Полный астрологический гороскоп.</p>
@@ -151,7 +140,7 @@
                     </div>
                 <div class="price-item">
                     <div class="price-img">
-                        <img src="../assets/img/1-200.jpg" alt="">
+                        <img src="../assets/img/4-200.jpg" alt="">
                     </div>
                         <div class="price-desc">
                             <p>Астрологический прогноз, консультация астропсихолога.</p>
@@ -167,7 +156,7 @@
                 </div>
                 <div class="price-item">
                     <div class="price-img">
-                        <img src="../assets/img/1-200.jpg" alt="">
+                        <img src="../assets/img/5-200.jpg" alt="">
                     </div>
                         <div class="price-desc">
                             <p>Консультация таролога.</p>
@@ -181,7 +170,7 @@
                 </div>
                 <div class="price-item">
                     <div class="price-img">
-                        <img src="../assets/img/1-200.jpg" alt="">
+                        <img src="../assets/img/8-200.jpg" alt="">
                     </div>
                         <div class="price-desc">
                             <p>Обрядовая практика, изменение ситуации.</p>
@@ -196,7 +185,7 @@
                 </div>
                     <div class="price-item">
                         <div class="price-img">
-                            <img src="../assets/img/1-200.jpg" alt="">
+                            <img src="../assets/img/7-200.jpg" alt="">
                         </div>
                         <div class="price-desc">
                             <p>Активация амулетов и талисманов энергией стихий.</p>
@@ -207,7 +196,7 @@
                     </div>
                     <div class="price-item">
                         <div class="price-img">
-                            <img src="../assets/img/1-200.jpg" alt="">
+                            <img src="../assets/img/8-200.jpg" alt="">
                         </div>
                         <div class="price-desc">
                             <p>Диагностика проблемных ситуаций с помощью ясновидения и карт Мадам Ленорман.</p>
@@ -218,7 +207,7 @@
                     </div>
                     <div class="price-item">
                         <div class="price-img">
-                            <img src="../assets/img/1-200.jpg" alt="">
+                            <img src="../assets/img/5-200.jpg" alt="">
                         </div>
                         <div class="price-desc">
                             <p>Работа с минералами для активации полного ресурса их силы. </p>
@@ -288,7 +277,7 @@
 </section>
 <section>
     <div class="map">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Abca4447653fc81114f819140bef393854c14ec10e7e801d1cf7b3501a2f672c2&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0106cf1e83396bc8673fae45fbe72556973b27a58a08aefa033f3ef18ce926e8&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
     </div>
 </section>
 <section>

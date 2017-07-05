@@ -5,9 +5,8 @@ $(document).ready(function(){
 
     var popup     = $('.feedback'),
         openPopup = $('.popup-open'),
-        formBtn   = $('#send-form'),
-        formName  = $(formBtn).find('#name'),
-        formEmail = $(formBtn).find('#email');
+        priceItem  = $('.price-item'),
+        priceHover = $('.price-hover');
 
     $('.owl-carousel').owlCarousel({
         items:1,
@@ -38,7 +37,9 @@ $(document).ready(function(){
     $(popup).find('.close, .blackout').click(function() {
         $(popup).fadeOut(200);
     });
-
+    $(priceItem).hover(function() {
+        $(this).find(priceHover).toggleClass('active');
+    });
     function scroll(a) {
         $('html, body').animate({scrollTop:a}, 400);
     }

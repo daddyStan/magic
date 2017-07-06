@@ -596,6 +596,7 @@ li {
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    transform: translateX(-50%);
 }
 
 @media screen and (max-width: 900px){

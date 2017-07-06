@@ -39,7 +39,7 @@
 body{
     background-color: #efefef;
 }
-h2 {
+h1, h2 {
     font-size: 40px;
     line-height: 40px;
     text-align: center;
@@ -90,7 +90,8 @@ section:nth-child(2n) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 35%;
+    width: 30%;
+    text-align: center;
 }
 .logo-img {
     position: absolute;
@@ -116,6 +117,7 @@ section:nth-child(2n) {
     font-size: 34px;
     line-height: 44px;
     font-family: Monplesir;
+    align-items: center;
 }
 .logo-text_preheader {
     display: block;
@@ -280,11 +282,15 @@ section:nth-child(2n) {
     justify-content: center;
     width: 32%;
     margin-right: 2%;
+    margin-bottom: 2%;
     padding: 15px;
     background-color: #fff;
     box-shadow: 1px 2px 10px #d8d8d8;
 }
 .consultant-item:last-child {
+    margin-right: 0;
+}
+.consultant-item:nth-child(3n+1) {
     margin-right: 0;
 }
 .consultant-item.main-consultants {
@@ -349,7 +355,7 @@ section:nth-child(2n) {
     margin-left: 0;
 }
 .footer {
-    padding: 20px 0;
+    padding: 30px 0;
     background: #000;
 }
 .footer .logo {
@@ -388,6 +394,10 @@ section:nth-child(2n) {
     background-color: #fff;
     transform: translate3d(-50%, -50%, 0);
     z-index: 9999;
+}
+#feedback-popup p {
+    font-size: 14px;
+    line-height: 17px;
 }
 #feedback-popup .close {
     display: block;
@@ -674,7 +684,7 @@ li {
     .about p {
         font-size: 16px;
     }
-    h2 {
+    h1, h2 {
         font-size: 36px;
     }
     .logo-img.bot, .logo-img {
@@ -712,7 +722,7 @@ li {
 
 @media screen and (max-width: 600px) {
 
-    h2 {
+    h1, h2 {
         margin-bottom: 30px;
         font-size: 34px;
     }
@@ -791,7 +801,7 @@ li {
         margin-left: 75px;
         font-size: 35px;
     }
-    h2 {
+    h1, h2 {
         margin-bottom: 20px;
         font-size: 30px;
     }
@@ -831,7 +841,7 @@ li {
 
 @media screen and (max-width: 375px) {
 
-    h2 {
+    h1, h2 {
         font-size: 24px;
     }
     h3 {

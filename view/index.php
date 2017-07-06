@@ -19,7 +19,7 @@
                     <div class="logo">
                         <img src="../assets/img/logo_bot.png" alt="АстроЛандра" class="logo-img bot" />
                         <img src="../assets/img/logo_top.png" alt="АстроЛандра" class="logo-img top" />
-                        <span class="logo-text">АстроЛандра <span class="logo-text_preheader">Центр Психологического Консультирования и Эзотерики</span></span>
+                        <span class="logo-text">АстроЦентр Ландра</span>
                     </div>
                     <div class="social">
                         <a class="social-btn" href="https://vk.com/astro_landra" target="_blank"><img src="../assets/img/vk_icon.svg" alt="Мы в Вконтакте"></a>
@@ -48,7 +48,7 @@
         <div class="owl-carousel">
             <div class="owl-carousel_item">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A culpa et inventore ipsa itaque nostrum perspiciatis recusandae rem saepe sit.</p>
-                <img src="../assets/img/slider/1.jpg" alt="" />
+                <img src="../assets/img/slider/3.jpg" alt="" />
             </div>
             <div class="owl-carousel_item">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur commodi, dolorum esse et eum necessitatibus odio perspiciatis quibusdam sed.</p>
@@ -56,7 +56,11 @@
             </div>
             <div class="owl-carousel_item">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dicta dignissimos dolorem, laboriosam nesciunt nihil nisi quidem ullam ut vero.</p>
-                <img src="../assets/img/slider/3.jpg" alt="" />
+                <img src="../assets/img/slider/1.jpg" alt="" />
+            </div>
+            <div class="owl-carousel_item">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi dicta dignissimos dolorem, laboriosam nesciunt nihil nisi quidem ullam ut vero.</p>
+                <img src="../assets/img/slider/4.jpg" alt="" />
             </div>
         </div>
     </header>
@@ -64,6 +68,7 @@
 <section>
     <div class="about">
         <div class="wrap">
+            <h1>Центр Психологического Консультирования и эзотерики</h1>
             <p>Человек – это тоже модель Вселенной, поэтому всегда и для всего важно уметь выбрать время! Помните, каждый – сам Творец своей судьбы. Как говорится «каждый выбирает для себя»: профессию, религию, дорогу и …советчика.</p>
             <p>Вам хочется заглянуть в свое будущее, узнать, как правильно поступить в той или иной ситуации, чего опасаться и к чему стремиться? Спросите у профессионального астролога, который по дате, времени и месту рождения составит Ваш личный астрологический прогноз будущего!</p>
             <p>Профессиональный астролог может подсказать разумную стратегию и тактику Вашего поведения, конкретно указать, когда что лучше: молчать, кричать, бежать или переждать; подобрать правильные даты (день, месяц, период) для свадьбы, рождения, встречи, деловой поездки, отпуска, покупки, продажи, операции; дать прогноз брака, партнерства; дать эффективный бизнес-прогноз с дальнейшим астромагическим сопровождением Вашей успешной деятельности; провести эффективные ритуалы очищения Вашего дома, офиса, бизнес-пространства; избавить от негативных воздействий и влияния «доброжелателей»; избежать ДТП и несчастливых авиарейсов; не упустить свой шанс материального благополучия и удачи в бизнесе и в творчестве.</p>
@@ -288,7 +293,7 @@
                 <div class="logo">
                     <img src="../assets/img/logo_bot.png" alt="АстроЛандра" class="logo-img bot" />
                     <img src="../assets/img/logo_top.png" alt="АстроЛандра" class="logo-img top" />
-                    <span class="logo-text">АстроЛандра <span class="logo-text_preheader">Центр Психологического Консультирования и Эзотерики</span></span>
+                    <span class="logo-text">АстроЦентр Ландра</span>
                 </div>
                 <div class="social">
                     <a class="social-btn" href="https://vk.com/astro_landra" target="_blank"><img src="../assets/img/vk_icon.svg" alt="Мы в Вконтакте"></a>
@@ -308,6 +313,7 @@
 <div class="feedback">
     <div class="blackout"></div>
     <form id="feedback-popup" action="">
+        <p>Если у Вас возникли вопросы или вы хотите оставить отзыв - напишите нам! Обязательно указывайте адрес электронной почты, чтобы мы могли вам ответить.</p>
         <span class="close">&times;</span>
         <input id="name" type="text" placeholder="Имя" />
         <input id="email" type="text" placeholder="E-mail" />

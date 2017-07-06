@@ -8,3 +8,8 @@
  */
 
 define('PIN',7891);
+define('HOST','127.0.0.1');
+define('PROT','3307');
+define('DB-NAME','magic');
+define('USER','stan');
+define('PASSWORD','0000');

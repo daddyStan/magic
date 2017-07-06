@@ -5,6 +5,8 @@
  * Date: 05.07.17
  * Time: 20:18
  */
+require(__DIR__ . '/../../model/db.php');
+$db = \model\DB::getInstance();
 
 ?>
 

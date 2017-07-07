@@ -106,7 +106,7 @@
                     </div>
                 </div>
                 <div class="consultant-item">
-                    <img src="../assets/img/woman.jpg" alt="" />
+                    <img src="../assets/img/pers4.jpg" alt="" />
                     <div class="consultant-desc">
                         <h3>Дульсинея Ландровская</h3>
                         <p>"Индикатор" посетителей. По поведению и реакции на входящего нашей Дульсинеи можно с лёгкостью определить, что за человек пришёл к нам в гости. Ее статистика безупречна - Дуся не ошиблась ни разу. Самый верный и постоянный сотрудник офиса, следит за порядком, проверяет окрестности, оберегает Центр днем и ночью.</p>
@@ -282,6 +282,7 @@
 </section>
 <section>
     <div class="map">
+        <h2>Как нас найти</h2>
         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0106cf1e83396bc8673fae45fbe72556973b27a58a08aefa033f3ef18ce926e8&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
     </div>
 </section>

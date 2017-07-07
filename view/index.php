@@ -123,18 +123,18 @@
             <div class="price-list">
                     <div class="price-item">
                         <div class="price-img">
-                            <img src="../assets/img/2-200.jpg" alt="">
+                            <img src="../assets/img/1-200.jpg" alt="">
                         </div>
                         <div class="price-desc">
                             <p>Консультация астропсихолога по одной ситуации.</p>
                             <div class="price-hover">
-                                - подробный анализ интересующего Вас вопроса <br /> Обсуждение одной проблемы: 4000 - 6000 руб. (в пределах получаса)</p>
+                                <p>- подробный анализ интересующего Вас вопроса <br /> Обсуждение одной проблемы: 4000 - 6000 руб. (в пределах получаса)</p>
                             </div>
                         </div>
                     </div>
                     <div class="price-item">
                         <div class="price-img">
-                            <img src="../assets/img/3-200.jpg" alt="">
+                            <img src="../assets/img/2-200.jpg" alt="">
                         </div>
                         <div class="price-desc">
                             <p>Полный астрологический гороскоп.</p>
@@ -145,23 +145,23 @@
                     </div>
                 <div class="price-item">
                     <div class="price-img">
-                        <img src="../assets/img/4-200.jpg" alt="">
+                        <img src="../assets/img/3-200.jpg" alt="">
                     </div>
                         <div class="price-desc">
                             <p>Астрологический прогноз, консультация астропсихолога.</p>
                             <div class="price-hover">
                                 <p>Вам рассказывают о Вас, отвечают на любые вопросы (в пределах часа): от 10000 руб. <br />
-                                    - работа, учеба, карьера, здоровье, зачатие, дети и их Судьбы по звездам;<br /
-                                    - свадьба, развод, прогноз партнерства, брака;<br /
-                                    - поездки, соперники, взаимоотношения с родственниками, коллегами;<br /
-                                    - квартирные, имущественные, судебные ситуации и т.д.<br /
+                                    - работа, учеба, карьера, здоровье, зачатие, дети и их Судьбы по звездам;<br />
+                                    - свадьба, развод, прогноз партнерства, брака;<br />
+                                    - поездки, соперники, взаимоотношения с родственниками, коллегами;<br />
+                                    - квартирные, имущественные, судебные ситуации и т.д.<br />
                                     Все повторные визиты в течение года– 50%</p>
                             </div>
-                            </div>
+                        </div>
                 </div>
                 <div class="price-item">
                     <div class="price-img">
-                        <img src="../assets/img/5-200.jpg" alt="">
+                        <img src="../assets/img/4-200.jpg" alt="">
                     </div>
                         <div class="price-desc">
                             <p>Консультация таролога.</p>
@@ -171,11 +171,11 @@
                                     - помощь в принятии решения<br />
                                     Стоимость рассчитывается исходя из времени консультации - от  10 до 45 минут, от 1000 до 3000 рублей.</p>
                             </div>
-                            </div>
+                        </div>
                 </div>
                 <div class="price-item">
                     <div class="price-img">
-                        <img src="../assets/img/8-200.jpg" alt="">
+                        <img src="../assets/img/5-200.jpg" alt="">
                     </div>
                         <div class="price-desc">
                             <p>Обрядовая практика, изменение ситуации.</p>
@@ -186,11 +186,11 @@
                                     Стоимость устанавливается индивидуально, в зависимости от сложности. <br />
                                     Средний ценовой диапазон - от 5000 до 15000 рублей.</p>
                             </div>
-                            </div>
+                        </div>
                 </div>
                     <div class="price-item">
                         <div class="price-img">
-                            <img src="../assets/img/7-200.jpg" alt="">
+                            <img src="../assets/img/6-200.jpg" alt="">
                         </div>
                         <div class="price-desc">
                             <p>Активация амулетов и талисманов энергией стихий.</p>
@@ -201,7 +201,7 @@
                     </div>
                     <div class="price-item">
                         <div class="price-img">
-                            <img src="../assets/img/8-200.jpg" alt="">
+                            <img src="../assets/img/7-200.jpg" alt="">
                         </div>
                         <div class="price-desc">
                             <p>Диагностика проблемных ситуаций с помощью ясновидения и карт Мадам Ленорман.</p>
@@ -212,7 +212,7 @@
                     </div>
                     <div class="price-item">
                         <div class="price-img">
-                            <img src="../assets/img/5-200.jpg" alt="">
+                            <img src="../assets/img/8-200.jpg" alt="">
                         </div>
                         <div class="price-desc">
                             <p>Работа с минералами для активации полного ресурса их силы. </p>
@@ -223,7 +223,7 @@
                     </div>
                 <div class="price-item">
                     <div class="price-img">
-                        <img src="../assets/img/1-200.jpg" alt="">
+                        <img src="../assets/img/9-200.png" alt="">
                     </div>
                         <div class="price-desc">
                             <p>Профориентация: Звезды знают.</p>
@@ -234,11 +234,11 @@
                                     Правильный выбор профессии в настоящем – это 85,5% Вашего успеха в будущем.<br />
                                     Стоимость от 3000 до 5000 руб.</p>
                             </div>
-                            </div>
+                        </div>
                 </div>
                 <div class="price-item">
                     <div class="price-img">
-                        <img src="../assets/img/1-200.jpg" alt="">
+                        <img src="../assets/img/10-200.jpg" alt="">
                     </div>
                     <div class="price-desc">
                         <p>Снятие негативных воздействий.</p>

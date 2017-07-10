@@ -12,6 +12,6 @@
     <p align="center">&nbsp;</p>
     <p align="center">&nbsp;</p>
     <p align="center">Ваш PIN<br>
-        <input maxlength="4" name="pin" type="password"></p>
+        <input maxlength="4" name="pin" type="password" autocomplete="off"></p>
 </form>
 <p>&nbsp;</p>

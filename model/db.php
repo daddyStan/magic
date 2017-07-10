@@ -10,16 +10,18 @@ namespace model;
 
 class DB {
     protected static $_instance;
-    public $connect;
+    public $link;
+    public $allContent = [];
 
     private function __construct(){
         require_once (__DIR__ . '/../config/common.php');
-        echo "<br/><em>1.  Установка соединения с хостом...";
-        //подключаемся к БД
-        $this->connect = mysql_connect(HOST, USER, PASSWORD) or die("Невозможно установить соединение".mysql_error());
-        // выбираем таблицу
-        echo "<br/>2.  Выбор базы...";
-        mysql_select_db(NAME_BD, $this->connect) or die ("Невозможно выбрать указанную базу".mysql_error());
+        $this->link = mysqli_connect(
+            HOST,
+            USER,
+            PASSWORD,
+            DBNAME,
+            PORT);
+        $this->link->set_charset("utf8");
     }
 
     public static function getInstance() {
@@ -30,4 +32,69 @@ class DB {
     }
     private function __clone(){}
     private function __wakeup(){}
+
+    /**
+ * @param $query
+ * @return bool| \mysqli | array
+ */
+    public function dbQueryArryReturn($query) {
+        $raw = mysqli_query($this->link,$query);
+
+        if($raw){
+            $arr = [];
+            while( $row = mysqli_fetch_object($raw) ){
+                $arr[] = $row;
+            }
+
+            return $arr;
+        }
+
+        return null;
+    }
+
+    /**
+     * @param $query
+     * @return bool| \mysqli | array
+     */
+    public function dbQueryResourceReturn($query) {
+        $raw = mysqli_query($this->link,$query);
+        if($raw){return $raw;}
+        return null;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAllData() {
+        $rawContent = $this->dbQueryResourceReturn('select * from `content`;');
+        if($rawContent) {
+            while ($row = mysqli_fetch_object($rawContent)) {
+                $this->allContent[$row->content_id] =
+                    [
+                        'content_id' => $row->content_id,
+                        'name' => $row->name,
+                        'title' => $row->title,
+                        'text' => $row->text,
+                        'img' => $row->img,
+                        'dop_text' => $row->dop_text,
+                        'main_title' => $row->main_title,
+                        'date_changed' => $row->date_changed
+                    ];
+            }
+        }
+
+        return $this->allContent;
+    }
+
+    public function getRowByImg($img = null) {
+        if(!is_null($img)) {
+            foreach($this->allContent as $value) {
+                if($img == $value['img']) {
+                    return $value;
+                }
+            }
+        }
+
+        return false;
+    }
 }

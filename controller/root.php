@@ -7,5 +7,5 @@
  */
 
 class root {
-
+    public $params;
 }

@@ -7,10 +7,10 @@
  */
 require ('root.php');
 
-class logout extends \root {
-
+class logout extends \root
+{
     public function __construct() {
-
+        self::logout();
     }
 
     public static function logout() {

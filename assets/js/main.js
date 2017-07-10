@@ -17,7 +17,6 @@ $(document).ready(function(){
         smartSpeed:1000
     });
 
-
     $('.nav-list_item_link').click(function(event) {
         event.preventDefault();
         var id  = $(this).attr('href'),

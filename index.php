@@ -12,7 +12,7 @@ require 'config/route.php';
 $readyContent = isset($allRouts[$actualRoute]) ? $allRouts[$actualRoute] : $allRouts['error'];
 
 /**
- * @66todo РАЗОБРАТЬСЯ С КЕЙСОМ:
+ * @todo РАЗОБРАТЬСЯ С КЕЙСОМ:
  * В пути роута больше трёх параметров типа /ваф/выа/ваы/выа
  */
 
@@ -23,6 +23,7 @@ if ($readyContent == $allRouts['error']) {
         include $readyContent;
     } else {
         require (__DIR__ . '/controller/' . $readyContent['controller'] . '.php');
-        logout::logout();
+        $params = isset($readyContent['params']) ? $readyContent['params'] : false;
+        $controller = new $readyContent['controller']($params);
     }
 }

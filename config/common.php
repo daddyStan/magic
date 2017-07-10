@@ -9,8 +9,7 @@
 
 define('PIN',7891);
 define('HOST','127.0.0.1');
-define('PROT','3307');
-define('DBNAME','magic');
-define('USER','stan');
-define('PASSWORD','0000');
+define('DBNAME','astrolandr_db');
+define('USER','astrolandr_mysql');
+define('PASSWORD','Z3mJ_vYe');
 define('PORT','3307');

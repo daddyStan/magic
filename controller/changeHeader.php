@@ -15,7 +15,7 @@ class changeHeader extends root
         if(!$validate) {
             header('Location: /admin');
         } else {
-            require (__DIR__ . '\..\model\db.php');
+            require (__DIR__ . '/../model/db.php');
             $db = \model\DB::getInstance();
             foreach ($post as $key => $value) {
                 $str = "update `content` set `text`= '$value' WHERE `content_id`='$key'";

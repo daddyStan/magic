@@ -8,8 +8,8 @@
  */
 
 define('PIN',7891);
-define('HOST','127.0.0.1');
+define('HOST','astrolandr.mysql');
 define('DBNAME','astrolandr_db');
 define('USER','astrolandr_mysql');
 define('PASSWORD','Z3mJ_vYe');
-define('PORT','3307');
+define('PORT','3306');

@@ -43,9 +43,9 @@ class uslugi extends root
 
             if ($my_file_error_flag < 1) {
                 if (move_uploaded_file($my_file_tmp_name, $this->uploaddir.''.$my_file_destination_name)) {
-                    echo "фотография успешно загружена";
+//                    echo "фотография успешно загружена";
                 } else {
-                    echo "фотография не сохранена";
+//                    echo "фотография не сохранена";
                 }
             }
         }
@@ -75,9 +75,9 @@ class uslugi extends root
 
             if ($my_file_error_flag == 0) {
                 if (move_uploaded_file($my_file_tmp_name, $this->uploaddir.''.$my_file_destination_name)) {
-                    echo "фотография успешно загружена";
+//                    echo "фотография успешно загружена";
                 } else {
-                    echo "фотография не сохранена";
+//                    echo "фотография не сохранена";
                 }
             }
         }

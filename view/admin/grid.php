@@ -16,7 +16,6 @@ $allContent = $db->getAllData();
     <meta charset="UTF-8">
     <title>АстроЛандра</title>
     <script src="/assets/js/ckeditor/ckeditor.js"></script>
-    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/admin.css">
     <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
@@ -37,7 +36,7 @@ $allContent = $db->getAllData();
             Email:<input name="6" type="text" value="<?= $allContent[6]['text'] ?>"><br>
             VK:<input name="7" type="text" value="<?= $allContent[7]['text'] ?>"><br>
             INSTAGRAMM:<input name="8" type="text" value="<?= $allContent[8]['text'] ?>"><br>
-            Сообщение в попапе:<textarea name="9" type="text"><?= $allContent[9]['text'] ?></textarea><br>
+            Сообщение в попапе:<textarea name="9" type="text" cl><?= $allContent[9]['text'] ?></textarea><br>
             Названия меню 1:<input name="10" type="text" value="<?= $allContent[10]['text'] ?>"><br>
             Названия меню 2:<input name="11" type="text" value="<?= $allContent[11]['text'] ?>"><br>
             Названия меню 3:<input name="12" type="text" value="<?= $allContent[12]['text'] ?>"><br>
@@ -183,6 +182,7 @@ $allContent = $db->getAllData();
     </div>
     <div class="block">
     <h3>Отзывы</h3>
+        <form action="/admin/otziv" method="post" class="block">
         <?php
         foreach ($allContent as $otziv) {
             if($otziv['name'] == 'otziv') {
@@ -192,6 +192,8 @@ $allContent = $db->getAllData();
             }
         }
         ?>
+            <input type="submit" value="Сохранить все изменения" />
+        </form>
     </div>
 
     <p align="center">&nbsp;</p>

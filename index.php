@@ -23,7 +23,7 @@ if ($readyContent == $allRouts['error']) {
         include $readyContent;
     } else {
         require (__DIR__ . '/controller/' . $readyContent['controller'] . '.php');
-        $params = isset($readyContent['params']) ? $readyContent['params'] : false;
+        $params = isset($readyContent['params']) ? $readyContent['params'] : null;
         $controller = new $readyContent['controller']($params);
     }
 }

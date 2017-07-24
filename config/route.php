@@ -96,5 +96,8 @@ $allRouts = [
         'params' => [
             'action' => 'mainTitle'
         ]
-    ]
+    ],
+    '/admin/otziv' => [
+        'controller' => 'otziv'
+    ],
 ];

@@ -19,3 +19,43 @@ window.onload = function () {
         document.body.scrollTop = cook;
     }
 }
+
+function del (value) {
+    $.ajax({
+        type: "POST",
+        url: '/admin/otzivdelete',
+        data: {delete:value.name},
+        success: function(data){
+            if(data){
+                value.value = "Удалено";
+                setTimeout(function(){location.reload()},1000);
+            }
+        }
+    });
+}
+
+function up(el) {
+    var id = el.id.replace(/[\D]+/,"");
+    $.ajax({
+        type: "POST",
+        url: '/admin/otzivorderup',
+        data: {id:id},
+        success: function(data){
+            setTimeout(function(){location.reload()},1000);
+            console.log(data);
+        }
+    });
+}
+
+function down(el) {
+    var id = el.id.replace(/[\D]+/,"");
+    $.ajax({
+        type: "POST",
+        url: '/admin/otzivorderdown',
+        data: {id:id},
+        success: function(data){
+            setTimeout(function(){location.reload()},1000);
+            console.log(data);
+        }
+    });
+}

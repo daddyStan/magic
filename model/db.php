@@ -22,6 +22,7 @@ class DB {
             DBNAME,
             PORT);
         $this->link->set_charset("utf8");
+        $this->allContent = $this->getAllData();
     }
 
     public static function getInstance() {
@@ -78,7 +79,8 @@ class DB {
                         'img' => $row->img,
                         'dop_text' => $row->dop_text,
                         'main_title' => $row->main_title,
-                        'date_changed' => $row->date_changed
+                        'date_changed' => $row->date_changed,
+                        'order' => $row->order
                     ];
             }
         }

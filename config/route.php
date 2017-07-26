@@ -100,4 +100,28 @@ $allRouts = [
     '/admin/otziv' => [
         'controller' => 'otziv'
     ],
+    '/admin/otzivnew' => [
+        'controller' => 'otziv',
+        'params' => [
+            'action' => 'text'
+        ]
+    ],
+    '/admin/otzivdelete' => [
+        'controller' => 'otziv',
+        'params' => [
+            'action' => 'delete'
+        ]
+    ],
+    '/admin/otzivorderup' => [
+        'controller' => 'otziv',
+        'params' => [
+            'action' => 'up'
+        ]
+    ],
+    '/admin/otzivorderdown' => [
+        'controller' => 'otziv',
+        'params' => [
+            'action' => 'down'
+        ]
+    ],
 ];

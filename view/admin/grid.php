@@ -15,6 +15,11 @@ $allContent = $db->getAllData();
 <head>
     <meta charset="UTF-8">
     <title>АстроЛандра</title>
+    <script
+            src="http://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
     <script src="/assets/js/ckeditor/ckeditor.js"></script>
     <link rel="stylesheet" href="../assets/css/admin.css">
     <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
@@ -119,27 +124,32 @@ $allContent = $db->getAllData();
         </form>
         <table>
             <thead></thead>
-
             <?php
             $dir = __DIR__ . '/../../assets/img/magi';
             $f = scandir($dir);
+            $arr = [];
             foreach ($f as $file){
+                $html = "";
                 if($file != '..' && $file != '.') {
                     $row = $db->getRowByImg($file);
                     if($row && $row['content_id'] != 30) {
-                        echo '<tr>';
-                        echo '<td><img src="/assets/img/magi/' . $file . '" width="160" height="80" />';
-                        echo '<form enctype="multipart/form-data" action="/admin/imgmagizamena" method="POST" class="block">
+                        $html .= '<tr>';
+                        $html .= '<td><img src="/assets/img/magi/' . $file . '" width="160" height="80" />';
+                        $html .= '<form enctype="multipart/form-data" action="/admin/imgmagizamena" method="POST" class="block">
                                 <input type="hidden" name="content_id" value="' . $row['content_id'] . '">
                                 Заменить фото: <input name="imgmagizamena" type="file" accept="image/*" />
                                 <input type="submit" value="Сохранить файл" />
                                 </form></td>';
-                        echo '<td><form method="post" action="/admin/magi/text"><input type="text" name="magititle" value="' . $row['title'] . '"><textarea type="text" name="' . $row['content_id'] . '">' . $row['text'] . '</textarea><input type="submit" value="Сохранить"></form>';
-                        echo '<td><form method="post" action="/admin/magi/delete"><input name="delete" type="hidden" value="' . $row['content_id'] . '"><input name="img" type="hidden" value="' . $row['img'] . '"><input type="submit" value="Удалить"></form>';
-                        echo '<script>CKEDITOR.replace( "' . $row['content_id'] . '" );</script></tr>';
+                        $html .= '<td><form method="post" action="/admin/magi/text"><input type="text" name="magititle" value="' . $row['title'] . '"><textarea type="text" name="' . $row['content_id'] . '">' . $row['text'] . '</textarea><input type="submit" value="Сохранить"></form>';
+                        $html .= '<td><form method="post" action="/admin/magi/delete"><input name="delete" type="hidden" value="' . $row['content_id'] . '"><input name="img" type="hidden" value="' . $row['img'] . '"><input type="submit" value="Удалить"></form>';
+                        $html .= '<td><button id="id'.$row['content_id'].'" onclick="down(this)">Вверх</button><button id="id'.$row['content_id'].'" onclick="up(this)">Вниз</button></td>';
+                        $html .= '<script>CKEDITOR.replace( "' . $row['content_id'] . '" );</script></tr>';
                     }
+                    $arr[$row['order']] = $html;
                 }
             }
+            ksort($arr);
+            echo implode($arr);
             ?>
         </table>
     </div>
@@ -189,10 +199,16 @@ $allContent = $db->getAllData();
                 echo '<textarea name="otziv' . $otziv['content_id'] . '">';
                 echo $otziv['text'];
                 echo "</textarea><script>CKEDITOR.replace('otziv".$otziv['content_id']."');</script>";
+                echo "<input type='button' value='Удалить отзыв' name='" . $otziv['content_id']. "' onclick='del(this)'>";
             }
         }
         ?>
-            <input type="submit" value="Сохранить все изменения" />
+            <br><input type="submit" value="Сохранить все изменения" />
+        </form>
+        <form action="/admin/otzivnew" method="post" class="block">
+            <textarea type="text" name="otzivnew"></textarea>
+            <script>CKEDITOR.replace('otzivnew');</script>
+            <input type="submit" value="Сохранить новый отзыв" />
         </form>
     </div>
 

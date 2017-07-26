@@ -94,21 +94,25 @@ $allContent = $db->getAllData();
                 <?php
                 $dir = __DIR__ . '/../assets/img/magi';
                 $f = scandir($dir);
+                $arr = [];
                 foreach ($f as $file){
+                    $html = "";
                     if($file != '..' && $file != '.') {
                         $row = $db->getRowByImg($file);
                         if($row && $row['content_id'] != 30) {
-                            echo '<div class="consultant-item">';
-                            echo '<img src="../assets/img/magi/' . $file . '" alt="" />';
-                            echo '<div class="consultant-desc">';
-                            echo '<h3>' . $row['title'] . '</h3>';
-                            echo $row['text'];
-                            echo '</div>';
-                            echo '</div>';
+                            $html .= '<div class="consultant-item">';
+                            $html .= '<img src="../assets/img/magi/' . $file . '" alt="" />';
+                            $html .= '<div class="consultant-desc">';
+                            $html .= '<h3>' . $row['title'] . '</h3>';
+                            $html .= $row['text'];
+                            $html .= '</div>';
+                            $html .= '</div>';
                         }
+                        $arr[$row['order']] = $html;
                     }
                 }
-
+                ksort($arr);
+                echo implode($arr);
                 ?>
             </div>
         </div>

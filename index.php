@@ -6,8 +6,16 @@
  * Time: 20:56
  */
 
-ini_set('display_errors', 1);
+include_once "model/mainConfig.php";
+define("DB",model\mainConfig::getInstance()->allConfig[1]['config_status']);
+define("ISADMIN",preg_match("/admin/",$_SERVER["REQUEST_URI"]));
 require 'config/route.php';
+
+if(ISADMIN) {
+    if(file_exists(__DIR__ . "/view/cache.dat")) {
+        unlink(__DIR__ . "/view/cache.dat");
+    }
+}
 
 $readyContent = isset($allRouts[$actualRoute]) ? $allRouts[$actualRoute] : $allRouts['error'];
 

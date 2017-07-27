@@ -10,16 +10,12 @@ require ('root.php');
 
 class common extends root
 {
+    public $bd;
     public function __construct()
     {
         require (__DIR__ . '/../model/db.php');
-        $db = model\DB::getInstance();
-        $db->dbQueryResourceReturn("update `content` set `text`='" . $_POST['text'] . "', `title`='" . $_POST['title'] . "', `date_changed`='" . date('Y-m-d') . "' where `content_id`='29';");
-        /**
-         * @todo Проверить не упало ли чего изза коммент-строчек, если всё ок - удалить
-         */
-//        $filename = __DIR__ . '/../assets/img/slider/' . $_POST['img'];
-//        unlink($filename);
+        $this->db = model\DB::getInstance();
+        $this->db->dbQueryResourceReturn("update `content` set `text`='" . $_POST['text'] . "', `title`='" . $_POST['title'] . "', `date_changed`='" . date('Y-m-d') . "' where `content_id`='29';");
         header('Location: /admin');
     }
 

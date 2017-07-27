@@ -13,5 +13,5 @@
 <body>
 <section>
     <header class="header">
-        <p class="zaglyshka">Скоро здесь будет сайт</p>
+        <p class="zaglyshka">На сайте ведутся работы. В ближайшее время всё заработает.</p>
     </header>

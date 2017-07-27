@@ -9,7 +9,6 @@ require(__DIR__ . '/../../model/db.php');
 $db = \model\DB::getInstance();
 $allContent = $db->getAllData();
 ?>
-
 <!DOCTYPE html>
 <html lang="rus">
 <head>
@@ -29,8 +28,13 @@ $allContent = $db->getAllData();
     <meta name="description" content="Человек – это тоже модель Вселенной, поэтому всегда и для всего важно уметь выбрать время! Как говорится «каждый выбирает для себя»: профессию, религию, дорогу и …советчика.">
 </head>
 <div>
-
+    <div id="popup">ЗАГРУЗКА...</div>
 <div class="admin-panel">
+    <div class="block">
+        <span>Сайт включен</span><input type="checkbox" <?=
+            $db->allConfig[1]['config_status'] ?  'checked' : "";
+        ?> onchange="site(this);">
+    </div>
     <div class="block">
         <h3>Шапка/футер сайта:</h3>
         <form action="/admin/header" id="main" method="post" name="main_title">

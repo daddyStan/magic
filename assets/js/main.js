@@ -43,3 +43,20 @@ $(document).ready(function(){
         $('html, body').animate({scrollTop:a}, 400);
     }
 });
+
+function mail() {
+    var name = $("#name").val();
+    var email= $("#email").val();
+    var feedback= $("#feedback").val();
+    $.ajax({
+        type: "POST",
+        url: '/sendmail',
+        data: {name:name,email:email,feedback:feedback},
+        success: function(data){
+            console.log(data);
+            if(data === 'good') {
+                $('.feedback').toggle();
+            }
+        }
+    });
+}

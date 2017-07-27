@@ -27,9 +27,9 @@ class imageloader extends root
                 }
             }
         }
-
-        $db->dbQueryResourceReturn("insert into `content` (`name`, `title`, `text`, `img`, `dop_text`, `main_title`, `date_changed`) 
-                                    VALUES ('img','','','" . $my_file_destination_name . "', '', '', '" . date('Y-m-d') . "');");
+        $f = scandir($uploaddir);
+        $db->dbQueryResourceReturn("insert into `content` (`name`, `title`, `text`, `img`, `dop_text`, `main_title`, `date_changed`, `order`) 
+                                    VALUES ('img','','','" . $my_file_destination_name . "', '', '', '" . date('Y-m-d') . "', '" . (count($f) - 2)  . "');");
 
         header('Location: /admin');
     }

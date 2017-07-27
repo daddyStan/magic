@@ -9,12 +9,14 @@
 $actualRoute = $_SERVER["REQUEST_URI"];
 
 $allRouts = [
-    '/' => 'view/zahlyshka.php',
+    '/' => DB ?  'view/index.php' : 'view/zahlyshka.php',
     'error' => 'view/error.php',
     '/admin' => 'view/admin/index.php',
-    '/zag' => 'view/index.php',
     '/logout' => [
         'controller' => 'logout'
+    ],
+    '/sendmail' => [
+        'controller' => 'sendmail'
     ],
     '/admin/header' => [
         'controller' => 'changeHeader'
@@ -158,6 +160,12 @@ $allRouts = [
         'controller' => 'slider',
         'params' => [
             'action' => 'down'
+        ]
+    ],
+    '/admin/config/siteon' => [
+        'controller' => 'configController',
+        'params' => [
+            'action' => 'site'
         ]
     ],
 ];

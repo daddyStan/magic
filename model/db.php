@@ -12,6 +12,7 @@ class DB {
     protected static $_instance;
     public $link;
     public $allContent = [];
+    public $allConfig = [];
 
     private function __construct(){
         require_once (__DIR__ . '/../config/common.php');
@@ -23,6 +24,7 @@ class DB {
             PORT);
         $this->link->set_charset("utf8");
         $this->allContent = $this->getAllData();
+        $this->allConfig = $this->getAllConfig();
     }
 
     public static function getInstance() {
@@ -98,5 +100,22 @@ class DB {
         }
 
         return false;
+    }
+
+    public function getAllConfig() {
+        $rawContent = $this->dbQueryResourceReturn('select * from `config`;');
+        if($rawContent) {
+            while ($row = mysqli_fetch_object($rawContent)) {
+                $this->allConfig[$row->config_id] =
+                    [
+                        'config_id' => $row->config_id,
+                        'config_name' => $row->config_name,
+                        'config_status' => $row->config_status,
+                        'options' => $row->options
+                    ];
+            }
+        }
+
+        return $this->allConfig;
     }
 }

@@ -34,7 +34,8 @@ class otziv extends root
     }
 
     public function text() {
-        $this->db->dbQueryResourceReturn("INSERT INTO `content`(`name`, `text`, `date_changed`) VALUES ('otziv','" . $_POST['otzivnew'] . "','" . date('Y-m-d') . "')");
+        foreach ($this->db->allContent as $value){$value['name']=='otziv'?$arr[]=$value['content_id']:false;}
+        $this->db->dbQueryResourceReturn("INSERT INTO `content`(`name`, `text`, `date_changed`,`order`) VALUES ('otziv','" . $_POST['otzivnew'] . "','" . date('Y-m-d') . "', '" . (count($arr) + 1) . "')");
         header('Location: /admin');
     }
 
@@ -148,7 +149,7 @@ class otziv extends root
 
     public function deleteOrder($id,$db) {
         $arr = []; 
-        foreach ($this->db->allContent as $file){
+        foreach ($db->allContent as $file){
             if($file['name'] == 'otziv') {
                 $arr[$file['order']] = $file['content_id'];
                 $file['content_id'] == $id ? $idOrder = $file['order'] : $idOrder = false;

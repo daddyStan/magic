@@ -59,6 +59,7 @@ class uslugi extends root
     }
 
     public function uslugidelete() {
+        $this->deleteOrder($_POST['delete']);
         $this->db->dbQueryResourceReturn("update `content` set `img`='' where `content_id`='" . $_POST['delete'] . "';");
         $filename = __DIR__ . '/../assets/img/uslugi/' . $_POST['img'];
         unlink($filename);
@@ -77,8 +78,10 @@ class uslugi extends root
                 }
             }
         }
-        $this->db->dbQueryResourceReturn("insert into `content` (`name`, `title`, `text`, `img`, `dop_text`, `main_title`, `date_changed`) 
-                                    VALUES ('img','','','" . $my_file_destination_name . "', '', '', '" . date('Y-m-d') . "');");
+
+        $f = scandir($this->uploaddir);
+        $this->db->dbQueryResourceReturn("insert into `content` (`name`, `title`, `text`, `img`, `dop_text`, `main_title`, `date_changed`, `order`) 
+                                    VALUES ('img','','','" . $my_file_destination_name . "', '', '', '" . date('Y-m-d') . "', '" . (count($f)-3) . "');");
         header('Location: /admin');
     }
 
@@ -86,4 +89,85 @@ class uslugi extends root
         $this->db->dbQueryResourceReturn("update `content` set `title`='" . $_POST['title'] . "', `text`='" . $_POST['imguslugiaddmaintitle'] . "' where `content_id`='49';");
         header('Location: /admin');
     }
+
+    public function up() {
+        $id = $_POST['id'];
+        $dir = $this->uploaddir;
+        $f = scandir($dir);
+        $arr = [];
+        foreach ($f as $file){
+            if($file != '..' && $file != '.') {
+                $row = $this->db->getRowByImg($file);
+                if($row && $row['content_id'] != 30) {
+                    $arr[$row['order']] = $row['content_id'];
+                }
+            }
+        }
+        ksort($arr);
+        $rezaultArray = [];
+        foreach ($arr as $key => $value) {
+            if($value == $id && count($arr) != $key) {
+                $rezaultArray[$key] = $arr[$key + 1];
+                $rezaultArray[$key + 1] = $id;
+            }
+        }
+        foreach ($rezaultArray as $key => $value) {
+            $this->db->dbQueryResourceReturn("update `content` set `order`='" . $key . "'  where `content_id`='" . $value. "';");
+        }
+        echo "ok";
+    }
+
+    public function down() {
+        $id = $_POST['id'];
+        $dir = $this->uploaddir;
+        $f = scandir($dir);
+        $arr = [];
+        foreach ($f as $file){
+            if($file != '..' && $file != '.') {
+                $row = $this->db->getRowByImg($file);
+                if($row && $row['content_id'] != 30) {
+                    $arr[$row['order']] = $row['content_id'];
+                }
+            }
+        }
+        ksort($arr);
+        $rezaultArray = [];
+        foreach ($arr as $key => $value) {
+            if($value == $id && $key != 1) {
+                $rezaultArray[$key] = $arr[$key - 1];
+                $rezaultArray[$key - 1] = $id;
+            }
+        }
+
+        foreach ($rezaultArray as $key => $value) {
+            $this->db->dbQueryResourceReturn("update `content` set `order`='" . $key . "'  where `content_id`='" . $value. "';");
+        }
+        echo "ok";
+    }
+
+    public function deleteOrder($id) {
+        $dir = $this->uploaddir;
+        $f = scandir($dir);
+        $arr = [];
+        foreach ($f as $file){
+            if($file != '..' && $file != '.') {
+                $row = $this->db->getRowByImg($file);
+                if($row) {
+                    $arr[$row['order']] = $row['content_id'];
+                }
+                $row['content_id'] == $id ? $idOrder = $row['order'] : $idOrder = false;
+            }
+        }
+        ksort($arr);
+        $rezaultArray = [];
+        foreach ($arr as $key => $value) {
+            if($key > $idOrder) {
+                $rezaultArray[$value] = $key - 1;
+            }
+        }
+        foreach ($rezaultArray as $key => $value) {
+            $this->db->dbQueryResourceReturn("update `content` set `order`='" . $value . "'  where `content_id`='" . $key. "';");
+        }
+    }
+
 }

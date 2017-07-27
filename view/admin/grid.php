@@ -57,22 +57,27 @@ $allContent = $db->getAllData();
         </form>
             <table>
                 <thead></thead>
-
             <?php
             $dir = __DIR__ . '/../../assets/img/slider';
             $f = scandir($dir);
+            $arr = [];
             foreach ($f as $file){
+                $html = "";
                 if($file != '..' && $file != '.') {
                     $row = $db->getRowByImg($file);
                     if($row) {
-                        echo '<tr>';
-                        echo '<td><img src="/assets/img/slider/' . $file . '" width="160" height="80" /></td>';
-                        echo '<td><form method="post" action="/admin/slider/text"><input type="text" name="' . $row['content_id'] . '" value="' . $row['text'] . '"><input type="submit" value="Сохранить"></form>';
-                        echo '<td><form method="post" action="/admin/slider/delete"><input name="delete" type="hidden" value="' . $row['content_id'] . '"><input name="img" type="hidden" value="' . $row['img'] . '"><input type="submit" value="Удалить"></form>';
-                        echo '</tr>';
+                        $html .= '<tr>';
+                        $html .= '<td><img src="/assets/img/slider/' . $file . '" width="160" height="80" /></td>';
+                        $html .= '<td><form method="post" action="/admin/slider/text"><input type="text" name="' . $row['content_id'] . '" value="' . $row['text'] . '"><input type="submit" value="Сохранить"></form>';
+                        $html .= '<td><form method="post" action="/admin/slider/delete"><input name="delete" type="hidden" value="' . $row['content_id'] . '"><input name="img" type="hidden" value="' . $row['img'] . '"><input type="submit" value="Удалить"></form>';
+                        $html .= '<td><button id="id'.$row['content_id'].'" onclick="downs(this)">Вверх('.$row['order'].')</button><button id="id'.$row['content_id'].'" onclick="ups(this)">Вниз('.$row['order'].')</button></td>';
+                        $html .= '</tr>';
+                        $arr[$row['order']] = $html;
                     }
                 }
             }
+            ksort($arr);
+            echo implode($arr);
             ?>
             </table>
     </div>
@@ -142,7 +147,7 @@ $allContent = $db->getAllData();
                                 </form></td>';
                         $html .= '<td><form method="post" action="/admin/magi/text"><input type="text" name="magititle" value="' . $row['title'] . '"><textarea type="text" name="' . $row['content_id'] . '">' . $row['text'] . '</textarea><input type="submit" value="Сохранить"></form>';
                         $html .= '<td><form method="post" action="/admin/magi/delete"><input name="delete" type="hidden" value="' . $row['content_id'] . '"><input name="img" type="hidden" value="' . $row['img'] . '"><input type="submit" value="Удалить"></form>';
-                        $html .= '<td><button id="id'.$row['content_id'].'" onclick="down(this)">Вверх</button><button id="id'.$row['content_id'].'" onclick="up(this)">Вниз</button></td>';
+                        $html .= '<td><button id="id'.$row['content_id'].'" onclick="down(this)">Вверх('.$row['order'].')</button><button id="id'.$row['content_id'].'" onclick="up(this)">Вниз('.$row['order'].')</button></td>';
                         $html .= '<script>CKEDITOR.replace( "' . $row['content_id'] . '" );</script></tr>';
                     }
                     $arr[$row['order']] = $html;
@@ -170,23 +175,29 @@ $allContent = $db->getAllData();
             <?php
             $dir = __DIR__ . '/../../assets/img/uslugi';
             $f = scandir($dir);
+            $arr = [];
             foreach ($f as $file){
+                $html = "";
                 if($file != '..' && $file != '.') {
                     $row = $db->getRowByImg($file);
                     if($row) {
-                        echo '<tr>';
-                        echo '<td><img src="/assets/img/uslugi/' . $file . '" width="160" height="80" />';
-                        echo '<form enctype="multipart/form-data" action="/admin/imgzamenauslugi" method="POST" class="block">
+                        $html .= '<tr>';
+                        $html .= '<td><img src="/assets/img/uslugi/' . $file . '" width="160" height="80" />';
+                        $html .= '<form enctype="multipart/form-data" action="/admin/imgzamenauslugi" method="POST" class="block">
                                 <input type="hidden" name="content_id" value="' . $row['content_id'] . '">
                                 Заменить фото: <input name="imgmagizamenauslugi" type="file" accept="image/*" />
                                 <input type="submit" value="Сохранить файл" />
                                 </form></td>';
-                        echo '<td><form method="post" action="/admin/uslugi/text"><input type="text" name="uslugititle" value="' . $row['title'] . '"><input type="hidden" name="content_id" value="'. $row['content_id'] .'"><textarea type="text" name="textuslugi'.$row['content_id'].'">' . $row['text'] . '</textarea><input type="submit" value="Сохранить"></form>';
-                        echo '<td><form method="post" action="/admin/uslugi/delete"><input name="delete" type="hidden" value="' . $row['content_id'] . '"><input name="img" type="hidden" value="' . $row['img'] . '"><input type="submit" value="Удалить"></form>';
-                        echo "<script>CKEDITOR.replace('textuslugi".$row['content_id']."');</script></tr>";
+                        $html .= '<td><form method="post" action="/admin/uslugi/text"><input type="text" name="uslugititle" value="' . $row['title'] . '"><input type="hidden" name="content_id" value="'. $row['content_id'] .'"><textarea type="text" name="textuslugi'.$row['content_id'].'">' . $row['text'] . '</textarea><input type="submit" value="Сохранить"></form>';
+                        $html .= '<td><form method="post" action="/admin/uslugi/delete"><input name="delete" type="hidden" value="' . $row['content_id'] . '"><input name="img" type="hidden" value="' . $row['img'] . '"><input type="submit" value="Удалить"></form>';
+                        $html .= '<td><button id="id'.$row['content_id'].'" onclick="downU(this)">Вверх('.$row['order'].')</button><button id="id'.$row['content_id'].'" onclick="upU(this)">Вниз('.$row['order'].')</button></td>';
+                        $html .= "<script>CKEDITOR.replace('textuslugi".$row['content_id']."');</script></tr>";
                     }
+                    $arr[$row['order']] = $html;
                 }
             }
+            ksort($arr);
+            echo implode($arr);
             ?>
         </table>
     </div>
@@ -194,14 +205,20 @@ $allContent = $db->getAllData();
     <h3>Отзывы</h3>
         <form action="/admin/otziv" method="post" class="block">
         <?php
+        $arr=[];
         foreach ($allContent as $otziv) {
+            $html = "";
             if($otziv['name'] == 'otziv') {
-                echo '<textarea name="otziv' . $otziv['content_id'] . '">';
-                echo $otziv['text'];
-                echo "</textarea><script>CKEDITOR.replace('otziv".$otziv['content_id']."');</script>";
-                echo "<input type='button' value='Удалить отзыв' name='" . $otziv['content_id']. "' onclick='del(this)'>";
+                $html .= '<textarea name="otziv' . $otziv['content_id'] . '">';
+                $html .= $otziv['text'];
+                $html .= "</textarea><script>CKEDITOR.replace('otziv".$otziv['content_id']."');</script>";
+                $html .= "<input type='button' value='Удалить отзыв' name='" . $otziv['content_id']. "' onclick='del(this)'>";
+                $html .= '<td><button id="id'.$otziv['content_id'].'" onclick="downO(this)">Вверх('.$otziv['order'].')</button><button id="id'.$otziv['content_id'].'" onclick="upO(this)">Вниз('.$otziv['order'].')</button></td>';
+                $arr[$otziv['order']] = $html;
             }
         }
+        ksort($arr);
+        echo implode($arr);
         ?>
             <br><input type="submit" value="Сохранить все изменения" />
         </form>

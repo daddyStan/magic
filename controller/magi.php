@@ -65,6 +65,7 @@ class magi extends root
                     header('Location: /admin');
                     break;
                 case 'magidelete':
+                    $this->deleteOrder($_POST['delete'],$db);
                     $db->dbQueryResourceReturn("update `content` set `img`='' where `content_id`='" . $_POST['delete'] . "';");
                     $filename = __DIR__ . '/../assets/img/magi/' . $_POST['img'];
                     unlink($filename);
@@ -105,5 +106,30 @@ class magi extends root
             }
         }
         return true;
+    }
+
+    public function deleteOrder($id,$db) {
+        $dir = __DIR__ . '/../assets/img/magi';
+        $f = scandir($dir);
+        $arr = [];
+        foreach ($f as $file){
+            if($file != '..' && $file != '.') {
+                $row = $db->getRowByImg($file);
+                if($row && $row['content_id'] != 30) {
+                    $arr[$row['order']] = $row['content_id'];
+                }
+                $row['content_id'] == $id ? $idOrder = $row['order'] : $idOrder = false;
+            }
+        }
+        ksort($arr);
+        $rezaultArray = [];
+        foreach ($arr as $key => $value) {
+            if($key > $idOrder) {
+                $rezaultArray[$value] = $key - 1;
+            }
+        }
+        foreach ($rezaultArray as $key => $value) {
+            $db->dbQueryResourceReturn("update `content` set `order`='" . $value . "'  where `content_id`='" . $key. "';");
+        }
     }
 }

@@ -52,20 +52,24 @@ $allContent = $db->getAllData();
         </nav>
         <div class="owl-carousel">
             <?php
-                $dir = __DIR__ . '/../assets/img/slider';
-                $f = scandir($dir);
-                foreach ($f as $file){
-                    if($file != '..' && $file != '.') {
-                        $row = $db->getRowByImg($file);
-                        if($row) {
-                            echo '<div class="owl-carousel_item">';
-                            echo '<p>' . $row['text'] . '</p>';
-                            echo '<img src="/assets/img/slider/' . $file . '" width="160" height="80" />';
-                            echo '</div>';
-                        }
+            $dir = __DIR__ . '/../assets/img/slider';
+            $f = scandir($dir);
+            $arr = [];
+            foreach ($f as $file){
+                $html = "";
+                if($file != '..' && $file != '.') {
+                    $row = $db->getRowByImg($file);
+                    if($row) {
+                        $html .= '<div class="owl-carousel_item">';
+                        $html .= '<p>' . $row['text'] . '</p>';
+                        $html .= '<img src="/assets/img/slider/' . $file . '" width="160" height="80" />';
+                        $html .= '</div>';
+                        $arr[$row['order']] = $html;
                     }
                 }
-
+            }
+            ksort($arr);
+            echo implode($arr);
             ?>
         </div>
     </header>
@@ -126,19 +130,24 @@ $allContent = $db->getAllData();
                 <?php
                 $dir = __DIR__ . '/../assets/img/uslugi';
                 $f = scandir($dir);
+                $arr = [];
                 foreach ($f as $file){
+                    $html = "";
                     if($file != '..' && $file != '.') {
                         $row = $db->getRowByImg($file);
                         if($row) {
 
-                            echo '<div class="price-item"><div class="price-img">' .
+                            $html .= '<div class="price-item"><div class="price-img">' .
                             '<img src="../assets/img/uslugi/' . $row['img'] . '" alt=""></div>' .
                             '<div class="price-desc">' . $row['title'] . '<div class="price-hover">' .
                             $row['text'] . '</div></div></div>';
 
-                         }
+                        }
+                        $arr[$row['order']] = $html;
                     }
                 }
+                ksort($arr);
+                echo implode($arr);
                 ?>
         </div>
     </div>
@@ -150,13 +159,18 @@ $allContent = $db->getAllData();
             <h2>Отзывы</h2>
             <div class="reviews-wrap">
                 <?php
-                    foreach ($allContent as $otziv) {
-                        if($otziv['name'] == 'otziv') {
-                            echo ' <div class="review-item">';
-                            echo $otziv['text'];
-                            echo "</div>";
-                        }
+                $arr=[];
+                foreach ($allContent as $otziv) {
+                    $html = "";
+                    if($otziv['name'] == 'otziv') {
+                        $html .= ' <div class="review-item">';
+                        $html .= $otziv['text'];
+                        $html .= "</div>";
+                        $arr[$otziv['order']] = $html;
                     }
+                }
+                ksort($arr);
+                echo implode($arr);
                 ?>
             </div>
         </div>

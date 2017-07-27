@@ -59,3 +59,81 @@ function down(el) {
         }
     });
 }
+
+function upU(el) {
+    var id = el.id.replace(/[\D]+/,"");
+    $.ajax({
+        type: "POST",
+        url: '/admin/uslugiorderu',
+        data: {id:id},
+        success: function(data){
+            setTimeout(function(){location.reload()},1000);
+            console.log(data);
+        }
+    });
+}
+
+function downU(el) {
+    var id = el.id.replace(/[\D]+/,"");
+    $.ajax({
+        type: "POST",
+        url: '/admin/uslugiorderd',
+        data: {id:id},
+        success: function(data){
+            setTimeout(function(){location.reload()},1000);
+            console.log(data);
+        }
+    });
+}
+
+function upO(el) {
+    var id = el.id.replace(/[\D]+/,"");
+    $.ajax({
+        type: "POST",
+        url: '/admin/otzivorderu',
+        data: {id:id},
+        success: function(data){
+            setTimeout(function(){location.reload()},1000);
+            console.log(data);
+        }
+    });
+}
+
+function downO(el) {
+    var id = el.id.replace(/[\D]+/,"");
+    $.ajax({
+        type: "POST",
+        url: '/admin/otzivorderd',
+        data: {id:id},
+        success: function(data){
+            setTimeout(function(){location.reload()},1000);
+            console.log(data);
+        }
+    });
+}
+
+function ups(el) {
+    var id = el.id.replace(/[\D]+/,"");
+    $.ajax({
+        type: "POST",
+        url: '/admin/sliderup',
+        data: {id:id},
+        success: function(data){
+            setTimeout(function(){location.reload()},1000);
+            console.log(data);
+        }
+    });
+}
+
+function downs(el) {
+    var id = el.id.replace(/[\D]+/,"");
+    $.ajax({
+        type: "POST",
+        url: '/admin/sliderdown',
+        data: {id:id},
+        success: function(data){
+            setTimeout(function(){location.reload()},1000);
+            console.log(data);
+        }
+    });
+}

@@ -124,4 +124,40 @@ $allRouts = [
             'action' => 'down'
         ]
     ],
+    '/admin/uslugiorderu' => [
+        'controller' => 'uslugi',
+        'params' => [
+            'action' => 'up'
+        ]
+    ],
+    '/admin/uslugiorderd' => [
+        'controller' => 'uslugi',
+        'params' => [
+            'action' => 'down'
+        ]
+    ],
+    '/admin/otzivorderu' => [
+        'controller' => 'otziv',
+        'params' => [
+            'action' => 'upO'
+        ]
+    ],
+    '/admin/otzivorderd' => [
+        'controller' => 'otziv',
+        'params' => [
+            'action' => 'downO'
+        ]
+    ],
+    '/admin/sliderup' => [
+        'controller' => 'slider',
+        'params' => [
+            'action' => 'up'
+        ]
+    ],
+    '/admin/sliderdown' => [
+        'controller' => 'slider',
+        'params' => [
+            'action' => 'down'
+        ]
+    ],
 ];

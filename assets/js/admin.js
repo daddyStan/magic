@@ -15,9 +15,13 @@ window.onload = function () {
         cook = getCookie('scroll');
     }
 
-    if(cook!==undefined) {
-        document.body.scrollTop = cook;
-    }
+    setTimeout(function () {
+        $("#popup").toggle(500);
+        if(cook!==undefined) {
+            document.body.scrollTop = cook;
+        }
+    },3000);
+
 }
 
 function del (value) {
@@ -136,4 +140,20 @@ function downs(el) {
             console.log(data);
         }
     });
+}
+
+function site(el) {
+    $("#popup").toggle(500);
+    $.ajax({
+        type: "POST",
+        url: '/admin/config/siteon',
+        data: {status:el.checked},
+        success: function(data){
+            console.log(data);
+            if(data=='false') {
+                el.checked = false;
+            }
+        }
+    });
+    $("#popup").toggle(500);
 }

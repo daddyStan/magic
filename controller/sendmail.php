@@ -20,7 +20,7 @@ class sendmail extends root
         $headers = "MIME-Version: 1.0\r\n";
         $headers .= "Content-type: text/html; charset=utf-8\r\n";
         $headers .= "From: astrolandra <info@astrolandra.ru>\r\n";
-        $sendMail = mail("astrolandra.ru@gmail.com,sts.ko@mail.ru", "Сообщение с сайта от  ".$today."", $message, $headers);
+        $sendMail = mail("astrolandra.ru@gmail.com,sts.ko@mail.ru,landra@ro.ru", "Сообщение с сайта от  ".$today."", $message, $headers);
 
         if($sendMail) {
             echo "good";

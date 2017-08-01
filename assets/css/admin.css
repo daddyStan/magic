@@ -235,4 +235,5 @@ button:hover{
     opacity: 0.9;
     color: #000;
     display: block;
+    z-index: 99999;
 }

@@ -72,7 +72,7 @@ $allContent = $db->getAllData();
                     if($row) {
                         $html .= '<tr>';
                         $html .= '<td><img src="/assets/img/slider/' . $file . '" width="160" height="80" /></td>';
-                        $html .= '<td><form method="post" action="/admin/slider/text"><input type="text" name="' . $row['content_id'] . '" value="' . $row['text'] . '"><input type="submit" value="Сохранить"></form>';
+                        $html .= '<td><form method="post" action="/admin/slider/text"><textarea type="text" name="' . $row['content_id'] . '">' . $row['text'] . '</textarea><input type="submit" value="Сохранить"><script>CKEDITOR.replace( "' . $row['content_id'] . '" );</script></form>';
                         $html .= '<td><form method="post" action="/admin/slider/delete"><input name="delete" type="hidden" value="' . $row['content_id'] . '"><input name="img" type="hidden" value="' . $row['img'] . '"><input type="submit" value="Удалить"></form>';
                         $html .= '<td><button id="id'.$row['content_id'].'" onclick="downs(this)">Вверх('.$row['order'].')</button><button id="id'.$row['content_id'].'" onclick="ups(this)">Вниз('.$row['order'].')</button></td>';
                         $html .= '</tr>';

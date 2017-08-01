@@ -50,7 +50,7 @@ if (file_exists($filename)) {
                             <a href="tel:+7(921)900-8-123" class="tel"><?= $allContent[3]['text'] ?></a>
                             <a href="tel:8(812)347-67-07" class="tel"><?= $allContent[4]['text'] ?></a>
                             <span class="address"><?= $allContent[5]['text'] ?></span>
-                            <a href="<?= $allContent[6]['text'] ?>" class="email"><?= $allContent[6]['text'] ?></a>
+                            <a href="mailto:<?= $allContent[6]['text'] ?>" class="email"><?= $allContent[6]['text'] ?></a>
                         </div>
                     </div>
                 </div>
@@ -244,6 +244,7 @@ if (file_exists($filename)) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../assets/js/owl.carousel.min.js" type="text/javascript"></script>
     <script src="../assets/js/main.js" type="text/javascript"></script>
+    <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter45496635 = new Ya.Metrika({ id:45496635, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true, ut:"noindex" }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/45496635?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
     </body>
     </html>
     <?

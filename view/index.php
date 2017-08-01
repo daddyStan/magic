@@ -80,7 +80,7 @@ if (file_exists($filename)) {
                         $row = $db->getRowByImg($file);
                         if ($row) {
                             $html .= '<div class="owl-carousel_item">';
-                            $html .= '<p>' . $row['text'] . '</p>';
+                            $html .= '<div><p>' . $row['text'] . '</p></div>';
                             $html .= '<img src="/assets/img/slider/' . $file . '" width="160" height="80" />';
                             $html .= '</div>';
                             $arr[$row['order']] = $html;
@@ -235,9 +235,9 @@ if (file_exists($filename)) {
         <div id="feedback-popup" action="">
             <p><?= $allContent[9]['text'] ?></p>
             <span class="close">&times;</span>
-            <input id="name" type="text" placeholder="Имя"/>
-            <input id="email" type="text" placeholder="E-mail"/>
-            <textarea id="feedback" placeholder="Сообщение"></textarea>
+            <input id="name" type="text" placeholder="Имя" required/>
+            <input id="email" type="text" placeholder="E-mail" required/>
+            <textarea id="feedback" placeholder="Сообщение" required></textarea>
             <button id="send-form" onclick="mail();return false;">Отправить</button>
         </div>
     </div>

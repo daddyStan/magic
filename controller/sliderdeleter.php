@@ -16,8 +16,8 @@ class sliderdeleter extends root
         $db = model\DB::getInstance();
         $db->dbQueryResourceReturn("update `content` set `img`='' where `content_id`='" . $_POST['delete'] . "';");
         $filename = __DIR__ . '/../assets/img/slider/' . $_POST['img'];
-        unlink($filename);
         $this->deleteOrder($_POST['delete'],$db);
+        unlink($filename);
         header('Location: /admin');
     }
 
@@ -44,13 +44,15 @@ class sliderdeleter extends root
                 if($row) {
                     $arr[$row['order']] = $row['content_id'];
                 }
-                $row['content_id'] == $id ? $idOrder = $row['order'] : $idOrder = false;
+                if($row['content_id'] == $id) {
+                    $idOrder = $row['order'];
+                }
             }
         }
         ksort($arr);
         $rezaultArray = [];
         foreach ($arr as $key => $value) {
-            if($key > $idOrder) {
+            if($idOrder > 0 && $key > $idOrder) {
                 $rezaultArray[$value] = $key - 1;
             }
         }

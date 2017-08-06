@@ -17,7 +17,8 @@ class otziv extends root
         require (__DIR__ . '/../model/db.php');
         $this->db = model\DB::getInstance();
         if(!is_null($params)) {
-            $this->$params['action']();
+            $method = $params['action'];
+            $this->$method();
         } else {
             $this->actionIndex();
         }
@@ -152,13 +153,15 @@ class otziv extends root
         foreach ($db->allContent as $file){
             if($file['name'] == 'otziv') {
                 $arr[$file['order']] = $file['content_id'];
-                $file['content_id'] == $id ? $idOrder = $file['order'] : $idOrder = false;
+                if($file['content_id'] == $id) {
+                    $idOrder = $file['order'];
+                }
             }
         }
         ksort($arr);
         $rezaultArray = [];
         foreach ($arr as $key => $value) {
-            if($key > $idOrder) {
+            if($idOrder > 0 && $key > $idOrder) {
                 $rezaultArray[$value] = $key - 1;
             }
         }

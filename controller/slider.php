@@ -11,13 +11,18 @@ require ('root.php');
 class slider extends root
 {
     public $db;
+    public $log;
 
     public function __construct($params=null)
     {
         require (__DIR__ . '/../model/db.php');
+        require (__DIR__ . '/../model/log.php');
         $this->db = model\DB::getInstance();
+        $this->log = new \model\log($this->db);
+
         if(!is_null($params)) {
-            $this->$params['action']();
+            $method = $params['action'];
+            $this->$method();
         } else {
             $this->actionIndex();
         }
@@ -25,6 +30,7 @@ class slider extends root
 
     public function up() {
         $id = $_POST['id'];
+        $this->log->logIt("Инициирован подъем картинки вверх","ID: " . $id);
         $dir = __DIR__ . '/../assets/img/slider';
         $f = scandir($dir);
         $arr = [];
@@ -45,6 +51,7 @@ class slider extends root
             }
         }
         foreach ($rezaultArray as $key => $value) {
+            $this->log->logIt("Запрос: " . "update `content` set `order`='" . $key . "'  where `content_id`='" . $value. "';","ID: $id");
             $this->db->dbQueryResourceReturn("update `content` set `order`='" . $key . "'  where `content_id`='" . $value. "';");
         }
         echo "ok";
@@ -52,6 +59,7 @@ class slider extends root
 
     public function down() {
         $id = $_POST['id'];
+        $this->log->logIt("Инициирован подъем картинки вниз","ID: " . $id);
         $dir = __DIR__ . '/../assets/img/slider';
         $f = scandir($dir);
         $arr = [];

@@ -37,9 +37,9 @@ class DB {
     private function __wakeup(){}
 
     /**
- * @param $query
- * @return bool| \mysqli | array
- */
+     * @param $query
+     * @return bool| \mysqli | array
+     */
     public function dbQueryArryReturn($query) {
         $raw = mysqli_query($this->link,$query);
 
@@ -53,6 +53,18 @@ class DB {
         }
 
         return null;
+    }
+
+    /**
+     * @param $query
+     * @return bool| \mysqli | array
+     */
+    public function dbQuery($query) {
+        $raw = mysqli_query($this->link,$query);
+        if($raw){
+            return true;
+        }
+        return false;
     }
 
     /**

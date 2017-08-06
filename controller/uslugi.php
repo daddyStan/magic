@@ -18,7 +18,8 @@ class uslugi extends root
         require (__DIR__ . '/../model/db.php');
         $this->db = model\DB::getInstance();
         if(!is_null($params)) {
-            $this->$params['action']();
+            $method = $params['action'];
+            $this->$method();
         }
     }
 
@@ -155,13 +156,15 @@ class uslugi extends root
                 if($row) {
                     $arr[$row['order']] = $row['content_id'];
                 }
-                $row['content_id'] == $id ? $idOrder = $row['order'] : $idOrder = false;
+                if($row['content_id'] == $id) {
+                    $idOrder = $row['order'];
+                }
             }
         }
         ksort($arr);
         $rezaultArray = [];
         foreach ($arr as $key => $value) {
-            if($key > $idOrder) {
+            if($idOrder > 0 && $key > $idOrder) {
                 $rezaultArray[$value] = $key - 1;
             }
         }
